@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人工智能猫咪行为图鉴</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .shell {
+            width: 100%;
+            position: relative;
+            padding: 80px 0;
+            transition: 0.3s ease 0s;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .shell:before {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(99, 99, 99, 0.8);
+            content: "";
+        }
+
+        .header {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 80px;
+            position: relative;
+        }
+
+        .title {
+            color: #fff;
+            font-size: 46px;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        .timeline {
+            display: flex;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            flex-direction: column;
+            max-width: 700px;
+            position: relative;
+        }
+
+        .content-title {
+            font-weight: normal;
+            font-size: 55px;
+            margin: -10px 0 0 0;
+            transition: 0.4s;
+            padding: 0 10px;
+            box-sizing: border-box;
+            color: #fff;
+        }
+
+        .content-desc {
+            margin: 0;
+            font-size: 15px;
+            box-sizing: border-box;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 25px;
+        }
+
+        .timeline:before {
+            position: absolute;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            margin-left: -1px;
+            content: "";
+            background: rgba(255, 255, 255, 0.07);
+        }
+
+        .item {
+            padding: 40px 0;
+            opacity: 0.3;
+            filter: blur(2px);
+            transition: 0.5s;
+            box-sizing: border-box;
+            width: calc(50% - 40px);
+            display: flex;
+            position: relative;
+            transform: translateY(-80px);
+        }
+
+        .item:before {
+            content: attr(data-text);
+            letter-spacing: 3px;
+            width: 100%;
+            position: absolute;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 13px;
+            border-left: 2px solid rgba(255, 255, 255, 0.5);
+            top: 70%;
+            margin-top: -5px;
+            padding-left: 15px;
+            opacity: 0;
+            right: calc(-100% - 56px);
+            font: 900 20px '';
+            letter-spacing: 5px;
+        }
+
+        .item:nth-child(even) {
+            align-self: flex-end;
+        }
+
+        .item:nth-child(even):before {
+            right: auto;
+            text-align: right;
+            left: calc(-100% - 56px);
+            padding-left: 0;
+            border-left: none;
+            border-right: 2px solid rgba(255, 255, 255, 0.5);
+            padding-right: 15px;
+        }
+
+        .item--active {
+            opacity: 1;
+            transform: translateY(0);
+            filter: blur(0px);
+        }
+
+        .item--active:before {
+            top: 50%;
+            transition: 0.3s all 0.2s;
+            opacity: 1;
+        }
+
+        .item--active .content-title {
+            margin: -50px 0 20px 0;
+        }
+
+        .img {
+            max-width: 100%;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .subtitle {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 16px;
+            letter-spacing: 5px;
+            margin: 10px 0 0 0;
+            font-weight: normal;
+        }
+
+        .footer {
+            padding: 95px 0;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #999;
+            display: inline-block;
+        }
+
+        @media only screen and (max-width: 767px) {
+            .item {
+                align-self: baseline !important;
+                width: 100%;
+                padding: 0 30px 150px 80px;
+            }
+
+            .item:before {
+                left: 10px !important;
+                padding: 0 !important;
+                top: 50px;
+                text-align: center !important;
+                width: 60px;
+                border: none !important;
+            }
+
+            .item:last-child {
+                padding-bottom: 40px;
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            .timeline:before {
+                left: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="shell" id="shell">
+        <div class="header">
+            <h2 class="title">人工智能猫咪行为图鉴</h2>
+            <h3 class="subtitle">基于人工智能的猫咪行为分析</h3>
+        </div>
+        <div class="timeline">
+            <div class="item" data-text="小组成员名单">
+                <div class="content">
+                    <img src="a.jpg" alt="" class="img">
+                    <h2 class="content-title">组内成员</h2>
+                    <p class="content-desc">
+               22广告伊丽努尔*22视传袁鸣英*22视传刘天洋*22公关黄爽
+                    </p>
+                </div>
+            </div>
+
+            <div class="item" data-text="选题背景">
+                <div class="content">
+                    <img src="b.jpg" alt="" class="img">
+                    <h2 class="content-title">前言</h2>
+                    <p class="content-desc">
+                      猫作为宠物在人类生活中扮演着重要的角色,但其行为和需求常常被误解,现今人工智能的发展为解析猫的肢体语言和声音提供了先进的技术手段,能够帮助我们更好地理解猫咪的各种行为.
+                    </p>
+                </div>
+            </div>
+
+            <div class="item" data-text="基于人工智能的猫咪行为分析">
+                <div class="content">
+                    <img src="c.jpg" alt="" class="img">
+                    <h2 class="content-title">选题介绍</h2>
+                    <p class="content-desc">
+                    我们的选题探讨人工智能技术在分析猫的肢体行为语言等中的应用,旨在通过人工智能技术手段帮助人们更好地理解猫的行为和需求.
+                    </p>
+                </div>
+            </div>
+
+            <div class="item" data-text="将猫咪的行为语言进行分析和转化">
+                <div class="content">
+                    <img src="d.jpg" alt="" class="img">
+                    <h2 class="content-title">选题构想</h2>
+                    <p class="content-desc">
+                      从现实采集和记录猫的行为以及通过在线视频、音频或其他可用的资源来获取收集大量猫的肢体语言行为样本,再利用人工智能已有的数据和算法,尝试将猫咪的声音和动作翻译成人类可以理解的语言或描述.
+                      例如猫咪的呼噜声可能表示它很满足,而某个特定的行为或姿势可能意味着它想玩耍.
+                    </p>
+                </div>
+            </div>
+
+            <div class="item" data-text="选题的最终呈现效果">
+                <div class="content">
+                    <img src="e.jpg" alt="" class="img">
+                    <h2 class="content-title">结果呈现</h2>
+                    <p class="content-desc">
+                      最终我们会将分析结果可视化,并制作成易于理解的猫咪语言图鉴,配以AI视频和图文印刷书籍,以此展现图鉴在促进人与猫沟通方面的潜在应用.
+                    </p>
+                </div>
+            </div>
+
+            <div class="item" data-text="最后展出场地的方案">
+                <div class="content">
+                    <img src="f.jpg" alt="" class="img">
+                    <h2 class="content-title">场地布置</h2>
+                    <p class="content-desc">
+                      投影仪/屏幕展示AI图鉴视频、展桌放置A3尺寸的相框(或挂墙)和图鉴实物书籍
+                    </p>
+                </div>
+            </div>
+
+            <div class="item" data-text="">
+                <div class="content">
+                    <img src="g.jpg" alt="" class="img">
+                    <h2 class="content-title">详情请见ppt</h2>
+                    <p class="content-desc">
+                      ♡♡♡
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+
+        (function ($) {
+            $.fn.timeline = function () {
+                var selectors = {
+                    id: $(this),
+                    item: $(this).find(".item"),
+                    activeClass: "item--active",
+                    img: ".img"
+                };
+
+                selectors.item.eq(0).addClass(selectors.activeClass);
+                selectors.id.css(
+                    "background-image",
+                    "url(" +
+                    selectors.item.first()
+                        .find(selectors.img)
+                        .attr("src") +
+                    ")"
+                );
+
+                var itemLength = selectors.item.length;
+
+                $(window).scroll(function () {
+                    var max, min;
+
+                    var pos = $(this).scrollTop();
+                    selectors.item.each(function (i) {
+
+                        min = $(this).offset().top;
+                        max = $(this).height() + $(this).offset().top;
+                        var that = $(this);
+
+                        if (i == itemLength - 2 && pos > min + $(this).height() / 2) {
+                            selectors.item.removeClass(selectors.activeClass);
+                            selectors.id.css(
+                                "background-image",
+                                "url(" +
+                                selectors.item.last()
+                                    .find(selectors.img)
+                                    .attr("src") +
+                                ")"
+                            );
+                            selectors.item.last().addClass(selectors.activeClass);
+                        }
+
+                        else if (pos <= max - 10 && pos >= min) {
+                            selectors.id.css(
+                                "background-image",
+                                "url(" +
+                                $(this)
+                                    .find(selectors.img)
+                                    .attr("src") +
+                                ")"
+                            );
+                            selectors.item.removeClass(selectors.activeClass);
+                            $(this).addClass(selectors.activeClass);
+                        }
+                    });
+                });
+            };
+        })(jQuery)
+
+       $("#shell").timeline();
+
+
+    </script>
+</body>
+
+</html>
