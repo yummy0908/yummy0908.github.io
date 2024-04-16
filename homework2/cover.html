@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>ymy:个人网页</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    .shell{
+        height: 100vh;
+        overflow-x: hidden;
+        perspective: 3px;
+    }
+    .shell div{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-style: 30px;
+        letter-spacing: 2px;
+    }
+    .image{
+        transform: translateZ(-1px) scale(1.6);
+        background-size: cover;
+        height: 100vh;
+        z-index: -1;
+    }
+    .text{
+        height: 50vh;
+        background-color: #fff;
+    }
+    .text h1{
+        color: #6c9ed4;
+    }
+    .heading{
+        z-index: -1;
+        transform: translateY(-30vh) translateZ(1px);
+        color: #fff;
+        font-size: 30px;
+    }
+    .a{
+       font-size: 40px;
+       color:#6c9ed4;
+    }
+</style>
+
+<body>
+    <div class="shell">
+        <div class="image" style="background-image: url('a.jpg');"></div>
+        <div class="heading">
+            <h1>Welcome to Ymy's world</h1>
+        </div>
+        <div class="text">
+            <h1>Slide to the bottom to view the homepage</h1>
+        </div>
+
+        <div class="image" style="background-image: url('b.jpg');"></div>
+        <div class="heading">
+            <h1>You can see my paintings here</h1>
+        </div>
+        <div class="text">
+            <h1>A painting is a poem without words</h1>
+
+        </div>
+
+        <div class="image" style="background-image: url('c.jpg');"></div>
+        <div class="heading">
+            <h1>come on</h1>
+        </div>
+        <div class="text">
+            <h1>图源画师@肥猫加天使</h1>
+        </div>
+
+        <div class="image" style="background-image: url('d.jpg');"></div>
+        <div class="heading">
+            <h1>I am here waiting for your arrival</h1>
+        </div>
+    </div>
+
+       <a class="a" href="html.html">Enter the homepage.</a>
+</body>
+
+</html>
