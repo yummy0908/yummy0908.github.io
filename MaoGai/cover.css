@@ -1,0 +1,35 @@
+.star {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.star1{
+    position: absolute;
+    top:280px;
+    left:0;
+    z-index:3;
+    max-width:7%;
+    transition: transform 0.3s ease-out;
+    z-index:2;
+}
+
+.star2{
+    position: absolute;
+    top:300px;
+    right:0;
+    z-index:2;
+    max-width:5%;
+    transition: transform 0.3s ease-out;
+    z-index:2;
+}
+
+.star3{
+    position: absolute;
+    top:480px;
+    left:30;
+    z-index:2;
+    max-width:10%;
+    transition: transform 0.3s ease-out;
+    z-index:2;
+}

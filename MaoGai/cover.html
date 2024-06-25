@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+       <link rel="stylesheet" href="cover.css">
+    <title>毛概:党史故事与文创设计</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    .shell{
+        height: 100vh;
+        overflow-x: hidden;
+        perspective: 3px;
+    }
+    .shell div{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-style: 30px;
+        letter-spacing: 2px;
+    }
+    .image{
+        transform: translateZ(-1px) scale(1.6);
+        background-size: cover;
+        height: 100vh;
+        z-index: -1;
+    }
+    .text{
+        height: 50vh;
+        background-color: #fff;
+    }
+    .text h1{
+        color:#9f1a13;
+    }
+    .heading{
+        z-index: -1;
+        transform: translateY(-30vh) translateZ(1px);
+        color: #fff;
+        font-size: 30px;
+    }
+    .a{
+       font-size: 40px;
+       color:#9f1a13;
+    }
+</style>
+
+<body>
+  <div id="star">
+    <img class="star1" src="star1.jpg">
+    <img class="star2" src="star2.jpg">
+    <img class="star3" src="star3.jpg">
+  </div>
+
+    <div class="shell">
+        <div class="image" style="background-image: url('4.jpg');"></div>
+        <div class="heading">
+            <h1>美术经典中的毛泽东思想</h1>
+        </div>
+        <div class="text">
+            <h1>小组成员</h1>
+        </div>
+
+        <div class="image" style="background-image: url('2.jpg');"></div>
+        <div class="heading">
+            <h1>袁鸣英 许惠童 丁文柯</h1>
+        </div>
+        <div class="text">
+            <h1>设计主题</h1>
+
+        </div>
+
+        <div class="image" style="background-image: url('3.jpg');"></div>
+        <div class="heading">
+            <h1>“今朝花又开,往昔焕新彩”</h1>
+        </div>
+        <div class="text">
+            <h1>我们从本学期学习的毛概理论及相关党史出发,设计了几款文创产品</h1>
+        </div>
+
+        <div class="image" style="background-image: url('1.jpg');"></div>
+        <div class="heading">
+            <h1>跳转主页开启党史文创之旅!</h1>
+        </div>
+    </div>
+
+
+       <a class="a" href="html.html">点击进入主网页</a>
+         <script src="hostpage2.js"></script>
+</body>
+
+</html>
